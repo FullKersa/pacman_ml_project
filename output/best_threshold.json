@@ -1,0 +1,7 @@
+{
+    "model": "Random Forest",
+    "threshold": 0.5858585858585859,
+    "metric": "accuracy",
+    "average": "macro",
+    "value": 0.9340085942295887
+}
