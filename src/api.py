@@ -28,7 +28,6 @@ class Item(BaseModel):
     loan_grade: str
     loan_amnt: int
     loan_int_rate: float
-    loan_status: int
     loan_percent_income: float
     cb_person_default_on_file: str
     cb_person_cred_hist_length: int
@@ -42,7 +41,6 @@ def predict(data: Item):
                             .replace("cb_person_default_on_file", "default_onfile")
                             .replace("person_emp_lenght", "person_emp_length"), inplace=True)
     
-    df = df.drop(columns=['loan_status'])
 
     # One-hot encoding
     ownership_encoded = pd.DataFrame(
@@ -63,8 +61,6 @@ def predict(data: Item):
     )
 
     # Rename sesuai nama saat training
-
-    print(df.columns)
 
     df.drop(columns=[
         'home_ownership', 'loan_intent', 'loan_grade', 'default_onfile'
