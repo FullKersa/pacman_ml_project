@@ -1,0 +1,14 @@
+# Ignore Python environment
+bintang_env/
+*.pyc
+__pycache__/
+.env
+*.pkl
+.DS_Store
+
+
+# Ignore IDE/editor files
+.vscode/
+
+# Ignore local source code cache (if any)
+src/__pycache__/

@@ -7,3 +7,8 @@ scipy
 seaborn
 fastapi
 jupyterlab
+fastapi
+pydantic
+streamlit
+requests
+uvicorn[standard]
